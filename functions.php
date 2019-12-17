@@ -101,9 +101,51 @@ if ( ! function_exists( 'adoptme_setup' ) ) :
 
 		add_image_size( 'companies_thumb', 1200, 800, true);
 
+		//Social Media 
 
+		add_action( 'customize_register', 'adoptme_social_media' );
+		
+		function adoptme_social_media( $wp_customize ) {
+			// Create custom panel.
+			$wp_customize->add_panel( 'social_media_block', array(
+				'priority'       => 500,
+				'theme_supports' => '',
+				'title'          => __( 'Social Media', 'adoptme' ),
+				'description'    => __( 'Changing social media in the footer.', 'adoptme' ),
+			) );
+			
+			// Add section.
+			$wp_customize->add_section( 'facebook_link' , array(
+				'title'    => __('Facebook','adoptme'),
+				'panel'    => 'social_media_block',
+				'priority' => 10
+			) );
+		
+			// Add setting
+			$wp_customize->add_setting( 'facebook_block', array(
+				 'default'           => __( '', 'adoptme' ),
+				 'sanitize_callback' => 'sanitize_social'
+			) );
+			// Add control
+			$wp_customize->add_control( new WP_Customize_Control(
+				$wp_customize,
+				'facebook_url',
+					array(
+						'label'    => __( 'Facebook url', 'adoptme' ),
+						'section'  => 'facebook_link',
+						'settings' => 'facebook_block',
+						'type'     => 'text'
+					)
+				)
+			);
+			
+			 // Sanitize text
+			function sanitize_social( $text ) {
+				return sanitize_text_field( $text );
+			}
+		}
 
-		//Header text -tera
+		//Header text 
 
 		add_action( 'customize_register', 'adoptme_header_text' );
 		/*
@@ -172,7 +214,7 @@ if ( ! function_exists( 'adoptme_setup' ) ) :
 			}
 		}
 
-		//dotad
+	
 
 		//About text
 		add_action( 'customize_register', 'adoptme_about_text' );
@@ -187,7 +229,7 @@ if ( ! function_exists( 'adoptme_setup' ) ) :
 				'title'          => __( 'About text', 'adoptme' ),
 				'description'    => __( 'Changing about text at main site.', 'adoptme' ),
 			) );
-			// Add Footer Text
+			
 			// Add section.
 			$wp_customize->add_section( 'custom_about_text' , array(
 				'title'    => __('Change About Text','adoptme'),
@@ -219,7 +261,7 @@ if ( ! function_exists( 'adoptme_setup' ) ) :
 			}
 		}
 
-		//About text końcówka
+		//About text
 		
 	}
 endif;

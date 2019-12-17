@@ -53,7 +53,7 @@ $my_query = new WP_Query($args);
         <div class="featured-cat__wrapper">
             <div class="featured-cat__cat-description">
             <h3 class="featured-cat__title"><?php the_title();?></h3>
-            <p class="adoptme__text featured-cat__description">eaque ipsa beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+            <p class="adoptme__text featured-cat__description"><?php echo wp_trim_words(get_the_excerpt(), 55) ;?></p>
             <a href="<?php the_permalink();?>"><button class="adoptme__button featured-cat__button">Adopt me</button></a>
             
         

@@ -14,14 +14,14 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
+		<div class="site-footer__social-media">
+		<?php if( get_theme_mod( 'facebook_block') != "" ): ?>
+				
+               <p> <?php echo get_theme_mod( 'facebook_block'); ?></p>
+				
+			<?php endif;?>
+		</div><!--.site-footer__social-media-->
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'adoptme' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'adoptme' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
 				printf( esc_html__( 'Theme: %1$s by %2$s.', 'adoptme' ), 'adoptme', '<a href="http://underscores.me/">Mila Kozlowska</a>' );
