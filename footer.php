@@ -17,7 +17,7 @@
 		<div class="site-footer__social-media">
 		<?php if( get_theme_mod( 'facebook_block') != "" ): ?>
 				
-               <p> <?php echo get_theme_mod( 'facebook_block'); ?></p>
+               <a href="<?php echo get_theme_mod( 'facebook_block'); ?>"target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/facebook.png" /></a>
 				
 			<?php endif;?>
 		</div><!--.site-footer__social-media-->
