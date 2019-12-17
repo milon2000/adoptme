@@ -1,8 +1,8 @@
 /*!
 Theme Name: Adopt Me!
-Theme URI: http://underscores.me/
+Theme URI: http://designedbymila.com/
 Author: Mila Kozlowska
-Author URI: http://underscores.me/
+Author URI: http://designedbymila.com/
 Description: Description
 Version: 1.0.0
 License: GNU General Public License v2 or later
@@ -1131,7 +1131,7 @@ a, a:visited {
 ## How it works
 --------------------------------------------------------------*/
 .how-it-works {
-	padding: 5%;
+	padding: 2%;
 }
 .how-it-works__wrapper {
 	display: flex;
@@ -1145,7 +1145,7 @@ a, a:visited {
 	text-align: center;
 }
 .how-it-works__img img {
-	max-width: 50%;
+	max-width: 36%;
 }
 .how-it-works__title {
 	text-transform: uppercase;
@@ -1248,6 +1248,10 @@ a, a:visited {
 }
 .site-info {
 	background-color: #fff;
+	display: flex;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
 }
 
 /*--------------------------------------------------------------
