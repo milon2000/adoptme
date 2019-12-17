@@ -138,6 +138,56 @@ if ( ! function_exists( 'adoptme_setup' ) ) :
 					)
 				)
 			);
+
+				// Add section.
+				$wp_customize->add_section( 'instagram_link' , array(
+					'title'    => __('Instagram','adoptme'),
+					'panel'    => 'social_media_block',
+					'priority' => 10
+				) );
+			
+				// Add setting
+				$wp_customize->add_setting( 'instagram_block', array(
+					 'default'           => __( '', 'adoptme' ),
+					 'sanitize_callback' => 'sanitize_social'
+				) );
+				// Add control
+				$wp_customize->add_control( new WP_Customize_Control(
+					$wp_customize,
+					'instagram_url',
+						array(
+							'label'    => __( 'Instagram url', 'adoptme' ),
+							'section'  => 'instagram_link',
+							'settings' => 'instagram_block',
+							'type'     => 'text'
+						)
+					)
+				);
+
+								// Add section.
+								$wp_customize->add_section( 'twitter_link' , array(
+									'title'    => __('Twitter','adoptme'),
+									'panel'    => 'social_media_block',
+									'priority' => 10
+								) );
+							
+								// Add setting
+								$wp_customize->add_setting( 'twitter_block', array(
+									 'default'           => __( '', 'adoptme' ),
+									 'sanitize_callback' => 'sanitize_social'
+								) );
+								// Add control
+								$wp_customize->add_control( new WP_Customize_Control(
+									$wp_customize,
+									'twitter_url',
+										array(
+											'label'    => __( 'Twitter url', 'adoptme' ),
+											'section'  => 'twitter_link',
+											'settings' => 'twitter_block',
+											'type'     => 'text'
+										)
+									)
+								);
 			
 			 // Sanitize text
 			function sanitize_social( $text ) {
