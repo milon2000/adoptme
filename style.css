@@ -1,4 +1,4 @@
-/*!
+ /*!
 Theme Name: Hairball
 Theme URI: http://designedbymila.com/
 Author: Made by Mila
@@ -9,13 +9,10 @@ License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: hairball
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
-
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
-
 Adopt Me! is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
-
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
@@ -615,15 +612,15 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: #595556;
 }
 
-a:visited {
+/*a:visited {
 	color: purple;
-}
+}*/
 
 a:hover, a:focus, a:active {
-	color: midnightblue;
+background-color: #fff;
 }
 
 a:focus {
@@ -637,91 +634,106 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-.main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	/*width: 15%;
-	padding-right: 5%;*/
+.nav a {
+	text-decoration: none;
+	line-height: 2;
 }
-
-.top-bar {
-	display: flex;
-	justify-content: space-between;
-	align-items: start;
-}
-
-
-.main-navigation ul {
-	opacity: 0;
+  a:hover {
+	opacity: 0.8;
+  }
+  
+  .nav-toggle {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+	cursor: pointer;
+	height: 2rem;
+	right: 2rem;
+	position: fixed;
+	top: 2rem;
+	width: 3.6rem;
+	z-index: 2;
+  }
+  .nav-toggle:hover {
+	opacity: 0.8;
+  }
+  .nav-toggle .nav-toggle-bar,
+  .nav-toggle .nav-toggle-bar::after,
+  .nav-toggle .nav-toggle-bar::before {
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	background: #efebec;
+	content: "";
+	height: 0.4rem;
+	width: 100%;
+  }
+  .nav-toggle .nav-toggle-bar {
+	margin-top: 0;
+  }
+  .nav-toggle .nav-toggle-bar::after {
+	margin-top: 0.8rem;
+  }
+  .nav-toggle .nav-toggle-bar::before {
+	margin-top: -0.8rem;
+  }
+  .nav-toggle.expanded .nav-toggle-bar {
+	background: transparent;
+  }
+  .nav-toggle.expanded .nav-toggle-bar::after, .nav-toggle.expanded .nav-toggle-bar::before {
+	background: #efebec;
+	margin-top: 0;
+  }
+  .nav-toggle.expanded .nav-toggle-bar::after {
+	-ms-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+  }
+  .nav-toggle.expanded .nav-toggle-bar::before {
+	-ms-transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+  }
+  
+  .nav {
+	-webkit-transition: left 0.5s ease;
+	-moz-transition: left 0.5s ease;
+	-ms-transition: left 0.5s ease;
+	-o-transition: left 0.5s ease;
+	transition: left 0.5s ease;
+	background: #efebec;
+	color: white;
+	cursor: pointer;
+	font-size: 1.4rem;
+	height: 100vh;
+	left: -20rem;
+	padding: 6rem 2rem 2rem 2rem;
+	position: fixed;
+	top: 0;
+	width: 20rem;
+	z-index: 1;
+  }
+  .nav.expanded {
+	left: 0;
+  }
+  .nav ul {
+	position: absolute;
+	top: 30%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
 	list-style: none;
 	margin: 0;
-	padding-left: 0;
-	height: 0;
-	transition: all 350ms ease-in-out;
-	
-}
-
-
-
-.main-navigation a {
-	display: block;
-	text-decoration: none;
-}
-.nav-menu {
-	display: flex;
-	flex-direction: row;
-}
-
-.menu-item:hover a {
-	background-color: #efebec;
-}
-a, a:visited {
-	color: #595556;
-	font-weight: 400;
-}
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	padding-top: 30px;
-
-}
-.main-navigation.toggled ul {
-	height: 300px;
-	opacity: 1;
-	
-}
-.nav-menu {
-	display: flex;
-	flex-direction: column;
-}
-
-@media screen and (min-width: 60em) {
-	.menu-toggle {
-		display: none;
-		
-	}
-	.main-navigation ul {
-		/*display: block;*/
-		display: flex;
-		justify-content: space-between;
-		padding-right: 5%;
-		padding-left: 20%;
-		opacity: 1;
-		flex-direction: row;
-	}
-
-	.top-bar {
-		justify-content: space-around;
-		flex-direction: row;
-		display: flex;
-		align-items: center;
-		padding: 2% 0 3% 0;
-	}
-	.main-navigation {
-		width: 100%;
-	}
-}
+	padding: 0;
+  }
+  
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
@@ -1018,7 +1030,7 @@ body {
 }*/
 .site-branding {
 	padding-left: 5%;
-	padding-top: 2%;
+	padding-top: 3%;
 }
 .menu-item {
 	text-transform: uppercase;

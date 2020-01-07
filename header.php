@@ -25,7 +25,7 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'adoptme' ); ?></a>
 
 	<header id="masthead" class="site-header">
-	 <div class="top-bar">
+	
 		<div class="site-branding">
 		<?php
 			the_custom_logo();
@@ -44,11 +44,11 @@
 				<p class="site-description"><?php echo $adoptme_description; /* WPCS: xss ok. */ ?></p>
 			<?php endif; ?>
 		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<div class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'adoptme' ); ?><span></span>
-                    <span></span>
-                    <span></span></div>
+		<div class="nav-toggle">
+		<div class="nav-toggle-bar"></div>
+		</div><!--.nav-toggle-->
+		<nav id="site-navigation" class="nav">
+		
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',
@@ -57,7 +57,7 @@
 			?>
 		</nav><!-- #site-navigation -->
 		
-	 </div><!-- .top-bar -->
+	
 
 	<?php if ( get_header_image() && is_front_page() ) : ?>
 		<div class="header-section">
