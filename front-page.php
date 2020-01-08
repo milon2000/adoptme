@@ -14,20 +14,20 @@
 
         <div class="how-it-works__column">
             <figure class="how-it-works__img"><img src="<?php echo get_template_directory_uri(); ?>/images/cats1.png" /></figure>
-            <h4 class="how-it-works__title">Match the cat</h4>
-            <p class="how-it-works__description">Ut enim ad minima veniam, quis nostrum exercitationem ullam.</p>
+            <?php if( get_theme_mod( 'how_it_works_first_block_title') != "" ): ?> <h4 class="how-it-works__title"><?php echo get_theme_mod( 'how_it_works_first_block_title'); ?></h4><?php endif;?>
+                <?php if( get_theme_mod( 'how_it_works_first_block_txt') != "" ): ?> <p class="how-it-works__description"><?php echo get_theme_mod( 'how_it_works_first_block_txt'); ?></p><?php endif;?>
         </div><!--.how-it-works__column-->
 
         <div class="how-it-works__column">
         <figure class="how-it-works__img"><img src="<?php echo get_template_directory_uri(); ?>/images/cats2.png" /></figure>
-            <h4 class="how-it-works__title">Fill in the questionnaire</h4>
-            <p class="how-it-works__description">Ut enim ad minima veniam, quis nostrum exercitationem ullam.</p>
+        <?php if( get_theme_mod( 'how_it_works_second_block_title') != "" ): ?> <h4 class="how-it-works__title"><?php echo get_theme_mod( 'how_it_works_second_block_title'); ?></h4><?php endif;?>
+            <?php if( get_theme_mod( 'how_it_works_second_block_txt') != "" ): ?> <p class="how-it-works__description"><?php echo get_theme_mod( 'how_it_works_second_block_txt'); ?></p><?php endif;?>
         </div><!--.how-it-works__column-->
 
         <div class="how-it-works__column">
         <figure class="how-it-works__img"><img src="<?php echo get_template_directory_uri(); ?>/images/cats3.png" /></figure>
-            <h4 class="how-it-works__title">Pick up the cat</h4>
-            <p class="how-it-works__description">Ut enim ad minima veniam, quis nostrum exercitationem ullam.</p>
+        <?php if( get_theme_mod( 'how_it_works_third_block_title') != "" ): ?> <h4 class="how-it-works__title"><?php echo get_theme_mod( 'how_it_works_third_block_title'); ?></h4><?php endif;?>
+            <?php if( get_theme_mod( 'how_it_works_third_block_txt') != "" ): ?> <p class="how-it-works__description"><?php echo get_theme_mod( 'how_it_works_third_block_txt'); ?></p><?php endif;?>
         </div><!--.how-it-works__column-->
 
     </div><!--.how-it-works__wrapper-->

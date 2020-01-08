@@ -295,7 +295,7 @@ if ( ! function_exists( 'adoptme_setup' ) ) :
 			// Add control
 			$wp_customize->add_control( new WP_Customize_Control(
 				$wp_customize,
-				'custom_header_text',
+				'custom_about_text',
 					array(
 						'label'    => __( 'About text', 'adoptme' ),
 						'section'  => 'custom_about_text',
@@ -311,8 +311,154 @@ if ( ! function_exists( 'adoptme_setup' ) ) :
 			}
 		}
 
-		//About text
+		//How it works
 		
+		add_action( 'customize_register', 'adoptme_how_it_works_section' );
+		/*
+		 * Register Our Customizer Stuff Here
+		 */
+		function adoptme_how_it_works_section( $wp_customize ) {
+			// Create custom panel.
+			$wp_customize->add_panel( 'how_it_works_panel', array(
+				'priority'       => 500,
+				'theme_supports' => '',
+				'title'          => __( 'How it works section', 'adoptme' ),
+				'description'    => __( 'Changing how it works section on the home page.', 'adoptme' ),
+			) );
+			
+			// Add section (the first one)
+			$wp_customize->add_section( 'custom_how_it_works' , array(
+				'title'    => __('Change First Section','adoptme'),
+				'panel'    => 'how_it_works_panel',
+				'priority' => 10
+			) );
+		
+			// Add setting
+			$wp_customize->add_setting( 'how_it_works_first_block_title', array(
+				 'default'           => __( 'default text', 'adoptme' ),
+				 'sanitize_callback' => 'sanitize_how_it_works'
+			) );
+				// Add setting
+				$wp_customize->add_setting( 'how_it_works_first_block_txt', array(
+					'default'           => __( 'default text', 'adoptme' ),
+					'sanitize_callback' => 'sanitize_how_it_works'
+			   ) );
+			// Add control
+			$wp_customize->add_control( new WP_Customize_Control(
+				$wp_customize,
+				'how_it_works_first_block_title',
+					array(
+						'label'    => __( 'First section - title', 'adoptme' ),
+						'section'  => 'custom_how_it_works',
+						'settings' => 'how_it_works_first_block_title',
+						'type'     => 'text'
+					)
+				)
+			);
+					// Add control
+					$wp_customize->add_control( new WP_Customize_Control(
+						$wp_customize,
+						'how_it_works_first_block_txt',
+							array(
+								'label'    => __( 'First section - text', 'adoptme' ),
+								'section'  => 'custom_how_it_works',
+								'settings' => 'how_it_works_first_block_txt',
+								'type'     => 'text'
+							)
+						)
+					);
+
+					// Add section (the second one)
+			$wp_customize->add_section( 'custom_how_it_works2' , array(
+				'title'    => __('Change Second Section','adoptme'),
+				'panel'    => 'how_it_works_panel',
+				'priority' => 10
+			) );
+		
+			// Add setting
+			$wp_customize->add_setting( 'how_it_works_second_block_title', array(
+				 'default'           => __( 'default text', 'adoptme' ),
+				 'sanitize_callback' => 'sanitize_how_it_works'
+			) );
+				// Add setting
+				$wp_customize->add_setting( 'how_it_works_second_block_txt', array(
+					'default'           => __( 'default text', 'adoptme' ),
+					'sanitize_callback' => 'sanitize_how_it_works'
+			   ) );
+			// Add control
+			$wp_customize->add_control( new WP_Customize_Control(
+				$wp_customize,
+				'how_it_works_second_block_title',
+					array(
+						'label'    => __( 'Second section - title', 'adoptme' ),
+						'section'  => 'custom_how_it_works2',
+						'settings' => 'how_it_works_second_block_title',
+						'type'     => 'text'
+					)
+				)
+			);
+					// Add control
+					$wp_customize->add_control( new WP_Customize_Control(
+						$wp_customize,
+						'how_it_works_second_block_txt',
+							array(
+								'label'    => __( 'Second section - text', 'adoptme' ),
+								'section'  => 'custom_how_it_works2',
+								'settings' => 'how_it_works_second_block_txt',
+								'type'     => 'text'
+							)
+						)
+					);
+
+					// Add section (the third one)
+			$wp_customize->add_section( 'custom_how_it_works3' , array(
+				'title'    => __('Change Third Section','adoptme'),
+				'panel'    => 'how_it_works_panel',
+				'priority' => 10
+			) );
+		
+			// Add setting
+			$wp_customize->add_setting( 'how_it_works_third_block_title', array(
+				 'default'           => __( 'default text', 'adoptme' ),
+				 'sanitize_callback' => 'sanitize_how_it_works'
+			) );
+				// Add setting
+				$wp_customize->add_setting( 'how_it_works_third_block_txt', array(
+					'default'           => __( 'default text', 'adoptme' ),
+					'sanitize_callback' => 'sanitize_how_it_works'
+			   ) );
+			// Add control
+			$wp_customize->add_control( new WP_Customize_Control(
+				$wp_customize,
+				'how_it_works_third_block_title',
+					array(
+						'label'    => __( 'Third section - title', 'adoptme' ),
+						'section'  => 'custom_how_it_works3',
+						'settings' => 'how_it_works_third_block_title',
+						'type'     => 'text'
+					)
+				)
+			);
+					// Add control
+					$wp_customize->add_control( new WP_Customize_Control(
+						$wp_customize,
+						'how_it_works_third_block_txt',
+							array(
+								'label'    => __( 'Third section - text', 'adoptme' ),
+								'section'  => 'custom_how_it_works3',
+								'settings' => 'how_it_works_third_block_txt',
+								'type'     => 'text'
+							)
+						)
+					);
+			
+			 // Sanitize text
+			function sanitize_how_it_works( $text ) {
+				return sanitize_text_field( $text );
+			}
+		}		
+		
+				//How it works
 	}
 endif;
 add_action( 'after_setup_theme', 'adoptme_setup' );

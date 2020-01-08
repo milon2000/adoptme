@@ -14,21 +14,21 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-footer__social-media">
+		<div class="site-footer__social-media social-media">
 		<?php if( get_theme_mod( 'facebook_block') != "" ): ?>
 				
-               <a class="site-footer__social-icon"href="<?php echo get_theme_mod( 'facebook_block'); ?>"target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/facebook.png" /></a>
+               <a class="site-footer__social-icon social-icon"href="<?php echo get_theme_mod( 'facebook_block'); ?>"target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/facebook.png" /></a>
 				
 			<?php endif;?>
 
 			<?php if( get_theme_mod( 'instagram_block') != "" ): ?>
 				
-				<a class="site-footer__social-icon" href="<?php echo get_theme_mod( 'instagram_block'); ?>"target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/instagram.png" /></a>
+				<a class="site-footer__social-icon social-icon" href="<?php echo get_theme_mod( 'instagram_block'); ?>"target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/instagram.png" /></a>
 				 
 			 <?php endif;?>
 			 <?php if( get_theme_mod( 'twitter_block') != "" ): ?>
 				
-				<a class="site-footer__social-icon" href="<?php echo get_theme_mod( 'twitter_block'); ?>"target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/twitter.png" /></a>
+				<a class="site-footer__social-icon social-icon" href="<?php echo get_theme_mod( 'twitter_block'); ?>"target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/twitter.png" /></a>
 				 
 			 <?php endif;?>
 		</div><!--.site-footer__social-media-->
