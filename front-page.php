@@ -2,11 +2,11 @@
 
 <section class="about__text-area">
     <?php if( get_theme_mod( 'about_block') != "" ): ?>
-                    <p class=" adoptme__text about__text">
+                    <p class=" hairball__text about__text">
                     <?php echo get_theme_mod( 'about_block'); ?>
     </p>
     <?php endif;?>
-    <button class="adoptme__button about__button">Read More</button>
+    <button class="hairball__button about__button">Read More</button>
 </section><!--.quotation-text-area-->
 
 <section class="how-it-works">
@@ -53,8 +53,8 @@ $my_query = new WP_Query($args);
         <div class="featured-cat__wrapper">
             <div class="featured-cat__cat-description">
             <h3 class="featured-cat__title"><?php the_title();?></h3>
-            <p class="adoptme__text featured-cat__description"><?php echo wp_trim_words(get_the_excerpt(), 55) ;?></p>
-            <a href="<?php the_permalink();?>"><button class="adoptme__button featured-cat__button">Adopt me</button></a>
+            <p class="hairball__text featured-cat__description"><?php echo wp_trim_words(get_the_excerpt(), 55) ;?></p>
+            <a href="<?php the_permalink();?>"><button class="hairball__button featured-cat__button">Hairball</button></a>
             
         
     </div><!--.featured-cat__cat-description-->

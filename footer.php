@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Adopt_Me!
+ * @package hairball!
  */
 
 ?>
@@ -35,7 +35,7 @@
 		<div class="site-info">
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'adoptme' ), 'Adopt me!', '<a href="http://underscores.me/">Mila Kozlowska</a>' );
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'hairball' ), 'Hairball!', '<a href="http://underscores.me/">Mila Kozlowska</a>' );
 				?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

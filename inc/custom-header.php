@@ -8,34 +8,34 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package Adopt_Me!
+ * @package hairball!
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses adoptme_header_style()
+ * @uses hairball_header_style()
  */
-function adoptme_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'adoptme_custom_header_args', array(
+function hairball_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'hairball_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'header-text'            => true,
 		'width'                  => 1000,
 		'height'                 => 1000,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'adoptme_header_style',
+		'wp-head-callback'       => 'hairball_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', 'adoptme_custom_header_setup' );
+add_action( 'after_setup_theme', 'hairball_custom_header_setup' );
 
-if ( ! function_exists( 'adoptme_header_style' ) ) :
+if ( ! function_exists( 'hairball_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see adoptme_custom_header_setup().
+	 * @see hairball_custom_header_setup().
 	 */
-	function adoptme_header_style() {
+	function hairball_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*

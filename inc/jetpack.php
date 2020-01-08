@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package Adopt_Me!
+ * @package hairball!
  */
 
 /**
@@ -14,11 +14,11 @@
  * See: https://jetpack.com/support/responsive-videos/
  * See: https://jetpack.com/support/content-options/
  */
-function adoptme_jetpack_setup() {
+function hairball_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
-		'render'    => 'adoptme_infinite_scroll_render',
+		'render'    => 'hairball_infinite_scroll_render',
 		'footer'    => 'page',
 	) );
 
@@ -28,7 +28,7 @@ function adoptme_jetpack_setup() {
 	// Add theme support for Content Options.
 	add_theme_support( 'jetpack-content-options', array(
 		'post-details'    => array(
-			'stylesheet' => 'adoptme-style',
+			'stylesheet' => 'hairball-style',
 			'date'       => '.posted-on',
 			'categories' => '.cat-links',
 			'tags'       => '.tags-links',
@@ -42,12 +42,12 @@ function adoptme_jetpack_setup() {
 		),
 	) );
 }
-add_action( 'after_setup_theme', 'adoptme_jetpack_setup' );
+add_action( 'after_setup_theme', 'hairball_jetpack_setup' );
 
 /**
  * Custom render function for Infinite Scroll.
  */
-function adoptme_infinite_scroll_render() {
+function hairball_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
 		if ( is_search() ) :

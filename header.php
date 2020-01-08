@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Adopt_Me!
+ * @package hairball!
  */
 
 ?>
@@ -22,7 +22,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'adoptme' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'hairball' ); ?></a>
 
 	<header id="masthead" class="site-header">
 	
@@ -38,10 +38,10 @@
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php
 			endif;
-			$adoptme_description = get_bloginfo( 'description', 'display' );
-			if ( $adoptme_description || is_customize_preview() ) :
+			$hairball_description = get_bloginfo( 'description', 'display' );
+			if ( $hairball_description || is_customize_preview() ) :
 				?>
-				<p class="site-description"><?php echo $adoptme_description; /* WPCS: xss ok. */ ?></p>
+				<p class="site-description"><?php echo $hairball_description; /* WPCS: xss ok. */ ?></p>
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 		<div class="nav-toggle">

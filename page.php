@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Adopt_Me!
+ * @package hairball!
  */
 
 get_header();

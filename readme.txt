@@ -1,4 +1,4 @@
-=== Adopt Me! ===
+=== Hairball! ===
 
 Contributors: automattic
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
@@ -9,7 +9,7 @@ Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
-A starter theme called Adopt Me!.
+A starter theme called Hairball!.
 
 == Description ==
 
@@ -25,7 +25,7 @@ Description
 
 = Does this theme support any plugins? =
 
-Adopt Me! includes support for Infinite Scroll in Jetpack.
+Hairball! includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
