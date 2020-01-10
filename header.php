@@ -55,7 +55,7 @@
 				'menu_id'        => 'primary-menu',
 			) );
 			?>
-			<div class="social-media">
+			<div class="social-media--header social-media">
 		<?php if( get_theme_mod( 'facebook_block') != "" ): ?>
 				
                <a class="social-icon"href="<?php echo get_theme_mod( 'facebook_block'); ?>"target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/facebook.png" /></a>

@@ -520,6 +520,12 @@ table {
 	margin: 0 0 1.5em;
 	width: 100%;
 }
+h2 {
+	text-transform: uppercase;
+    font-weight: 100;
+    font-size: 1.3em;
+    letter-spacing: 3px;
+}
 
 /*--------------------------------------------------------------
 # Forms
@@ -648,11 +654,13 @@ a:hover, a:active {
 	user-select: none;
 	cursor: pointer;
 	height: 2rem;
-	right: 2rem;
+	right: 5%;
 	position: fixed;
-	top: 2rem;
+	top: 5%;
 	width: 3.6rem;
 	z-index: 2;
+	margin-right: 3%;
+	margin-top: 3%;
   }
   .nav-toggle:hover {
 	opacity: 0.8;
@@ -1270,12 +1278,54 @@ body {
     justify-content: center;
     align-items: center;
 }
+.social-media--header {
+	position: absolute;
+	bottom: 0;
+}
 /*--------------------------------------------------------------
-## Single page 
+## Pages
 --------------------------------------------------------------*/
-.site-content .single-project  {
+.site-content .single-project, .site-content .blog-page  {
 	width: 90%;
 	margin: 0 auto;
+}
+.content-area-blog {
+	width: 960px;
+    margin: 0 auto;
+    padding: 0 0;
+}
+
+.blog-area {
+	width: 70%;
+	float: left;
+	padding: 2%;
+}
+.widget-area {
+	width: 20%;
+	float: left;
+	padding: 2%;
+}
+.entry-footer span {
+	display: block;
+}
+.entry-title a {
+	text-decoration: none;
+}
+.entry-title {
+    font-size: 2em;
+}
+.type-post {
+	padding-top: 4%;
+	padding-bottom: 4%;
+}
+.widget-title {
+	font-size: 1em;
+}
+.widget ul {
+	margin: 0;
+}
+.widget li {
+	list-style-type: none;
 }
 /*--------------------------------------------------------------
 ## Media 

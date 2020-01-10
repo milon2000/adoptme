@@ -15,9 +15,9 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-
+	<div id="primary" class="content-area content-area-blog">
+		<main id="main" class="site-main blog-area">
+		<div class="blog-page">
 		<?php
 		if ( have_posts() ) :
 
@@ -50,7 +50,7 @@ get_header();
 
 		endif;
 		?>
-
+		</div><!--.blog-page-->
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
