@@ -522,7 +522,6 @@ table {
 }
 h2 {
 	text-transform: uppercase;
-    font-weight: 100;
     font-size: 1.3em;
     letter-spacing: 3px;
 }
@@ -1134,7 +1133,6 @@ object {
     -webkit-transition: .5s ease-in-out;
     -o-transition: .5s ease-in-out;
 	transition: .5s ease-in-out;
-	vertical-align: middle;
 	max-width: 100%;
 	margin: 0 auto;
 	display: block;
@@ -1297,10 +1295,14 @@ object {
 	float: left;
 	padding-right: 5%;
 }
-.content-area-blog,.content-area-about {
-	width: 960px;
+.content-area-blog,.content-area-about, .content-area-search {
+	max-width: 960px;
     margin: 0 auto;
-    padding: 0 0;
+	padding: 0 0;
+
+}
+.content-area {
+	min-height: 100vh;
 }
 
 
@@ -1356,7 +1358,11 @@ object {
 	.hairball__button {
 		font-size: 1em;
 	}
-}
+	.site-main {
+		padding-right: 5%;
+		padding-left: 5%;
+			}
+
 
 @media screen and (max-width: 1000px) {
 	.site-quotation {
@@ -1382,6 +1388,8 @@ object {
 		margin-top: 0.5em;
 		
 	}
+
+
 	
 }
 @media screen and (max-width: 780px) {
@@ -1404,6 +1412,7 @@ object {
 	.cats__title {
 		font-size: 1.3em;
 	}
+
 }
 
 @media screen and (max-width: 700px) {
@@ -1420,7 +1429,10 @@ object {
 	.how-it-works__column {
 		width: 100%;
 	}
-
+	.site-content .blog-page {
+		width: 100%;
+		padding-right: 0;
+	}
 }
 
 @media screen and (max-width: 600px) {
@@ -1474,4 +1486,4 @@ object {
 
 }
 
-
+}
