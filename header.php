@@ -45,7 +45,9 @@
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 		<div class="nav-toggle">
+			<div class="nav-toggle-div">
 		<div class="nav-toggle-bar"></div>
+			</div>
 		</div><!--.nav-toggle-->
 		<nav id="site-navigation" class="nav">
 		

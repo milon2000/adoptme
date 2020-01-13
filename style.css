@@ -730,7 +730,7 @@ a:hover, a:active {
 	-ms-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
 	transition: all 0.5s ease;
-	background: #efebec;
+	background: #706E6F;
 	content: "";
 	height: 0.4rem;
 	width: 100%;
@@ -748,7 +748,7 @@ a:hover, a:active {
 	background: transparent;
   }
   .nav-toggle.expanded .nav-toggle-bar::after, .nav-toggle.expanded .nav-toggle-bar::before {
-	background: #efebec;
+	background: #706E6F;
 	margin-top: 0;
   }
   .nav-toggle.expanded .nav-toggle-bar::after {
@@ -763,18 +763,18 @@ a:hover, a:active {
   }
   
   .nav {
-	-webkit-transition: left 0.5s ease;
-	-moz-transition: left 0.5s ease;
-	-ms-transition: left 0.5s ease;
-	-o-transition: left 0.5s ease;
-	transition: left 0.5s ease;
+	-webkit-transition: right 0.5s ease;
+	-moz-transition: right 0.5s ease;
+	-ms-transition: right 0.5s ease;
+	-o-transition: right 0.5s ease;
+	transition: right 0.5s ease;
 	background: #efebec;
 	color: #fff;
 	cursor: pointer;
 	font-size: 1.4rem;
 	font-weight: 400;
 	height: 100vh;
-	left: -20rem;
+	right: -20rem;
 	padding: 6rem 2rem 2rem 2rem;
 	position: fixed;
 	top: 0;
@@ -782,11 +782,11 @@ a:hover, a:active {
 	z-index: 1;
   }
   .nav.expanded {
-	left: 0;
+	right: 0;
   }
   .nav ul {
 	position: absolute;
-	top: 30%;
+	top: 50%;
 	-webkit-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
@@ -1509,6 +1509,10 @@ object {
 	}
 	.featured-cat__cat-photo {
 		width: 100%;
+	}
+	.nav {
+		width: 15rem;
+		right: -15rem;
 	}
 
 }
