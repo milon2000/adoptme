@@ -526,7 +526,9 @@ h2 {
     font-size: 1.3em;
     letter-spacing: 3px;
 }
-
+a {
+	text-decoration: none;
+}
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -610,7 +612,9 @@ select {
 textarea {
 	width: 100%;
 }
-
+.search-submit {
+	display: none;
+}
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -641,7 +645,6 @@ a:hover, a:active {
 ## Menus
 --------------------------------------------------------------*/
 .nav a {
-	text-decoration: none;
 	line-height: 2;
 }
   a:hover {
@@ -798,7 +801,6 @@ a:hover, a:active {
 	left: 5px;
 	line-height: normal;
 	padding: 15px 23px 14px;
-	text-decoration: none;
 	top: 5px;
 	width: auto;
 	z-index: 100000;
@@ -1025,8 +1027,9 @@ object {
 /*--------------------------------------------------------------
 ## General
 --------------------------------------------------------------*/
-body {
+.site {
 	border: 10px solid #efebec;
+	min-height: 100vh;
 }
 /*--------------------------------------------------------------
 ## Header
@@ -1285,21 +1288,22 @@ body {
 /*--------------------------------------------------------------
 ## Pages
 --------------------------------------------------------------*/
-.site-content .single-project, .site-content .blog-page  {
-	width: 90%;
+.site-content .single-project   {
+	width: 960px;
 	margin: 0 auto;
 }
-.content-area-blog {
+.site-content .blog-page {
+	width: 70%;
+	float: left;
+	padding-right: 5%;
+}
+.content-area-blog,.content-area-about {
 	width: 960px;
     margin: 0 auto;
     padding: 0 0;
 }
 
-.blog-area {
-	width: 70%;
-	float: left;
-	padding: 2%;
-}
+
 .widget-area {
 	width: 20%;
 	float: left;
@@ -1308,15 +1312,16 @@ body {
 .entry-footer span {
 	display: block;
 }
-.entry-title a {
-	text-decoration: none;
-}
+
 .entry-title {
-    font-size: 2em;
+	font-size: 2em;
+	margin-top: 0;
+}
+.entry-header {
+	margin-bottom: 1.5em;
 }
 .type-post {
-	padding-top: 4%;
-	padding-bottom: 4%;
+	padding-bottom: 7%;
 }
 .widget-title {
 	font-size: 1em;
@@ -1327,6 +1332,7 @@ body {
 .widget li {
 	list-style-type: none;
 }
+
 /*--------------------------------------------------------------
 ## Media 
 --------------------------------------------------------------*/

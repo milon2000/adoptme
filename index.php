@@ -50,10 +50,12 @@ get_header();
 
 		endif;
 		?>
+		
 		</div><!--.blog-page-->
+		<?php get_sidebar(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+
 get_footer();
