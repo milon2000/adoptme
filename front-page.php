@@ -54,7 +54,7 @@ $my_query = new WP_Query($args);
             <div class="featured-cat__cat-description">
             <h3 class="featured-cat__title"><?php the_title();?></h3>
             <p class="hairball__text featured-cat__description"><?php echo wp_trim_words(get_the_excerpt(), 55) ;?></p>
-            <a href="<?php the_permalink();?>"><button class="hairball__button featured-cat__button">Hairball</button></a>
+            <a href="<?php the_permalink();?>"><button class="hairball__button featured-cat__button">Read more</button></a>
             
         
     </div><!--.featured-cat__cat-description-->
