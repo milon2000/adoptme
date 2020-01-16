@@ -111,7 +111,7 @@ if ( ! function_exists( 'hairball_setup' ) ) :
 				'priority'       => 500,
 				'theme_supports' => '',
 				'title'          => __( 'Social Media', 'hairball' ),
-				'description'    => __( 'Changing social media in the footer.', 'hairball' ),
+				'description'    => __( 'You can add links to your Social Media profiles.', 'hairball' ),
 			) );
 			
 			// Add section.
@@ -207,11 +207,11 @@ if ( ! function_exists( 'hairball_setup' ) ) :
 				'priority'       => 500,
 				'theme_supports' => '',
 				'title'          => __( 'Header Text', 'hairball' ),
-				'description'    => __( 'Changing header text.', 'hairball' ),
+				'description'    => __( 'Here you can change the quotation and author name in the header.', 'hairball' ),
 			) );
 
 			$wp_customize->add_section( 'header_quotation_text' , array(
-				'title'    => __('Change Quotation','hairball'),
+				'title'    => __('Add Quotation','hairball'),
 				'panel'    => 'text_blocks_header',
 				'priority' => 10
 			) );
@@ -235,7 +235,7 @@ if ( ! function_exists( 'hairball_setup' ) ) :
 			);
 
 			$wp_customize->add_section( 'header_author_text' , array(
-				'title'    => __('Change Author Name','hairball'),
+				'title'    => __('Add Author Name','hairball'),
 				'panel'    => 'text_blocks_header',
 				'priority' => 10
 			) );
@@ -277,12 +277,12 @@ if ( ! function_exists( 'hairball_setup' ) ) :
 				'priority'       => 500,
 				'theme_supports' => '',
 				'title'          => __( 'About text', 'hairball' ),
-				'description'    => __( 'Changing about text at main site.', 'hairball' ),
+				'description'    => __( 'Here you can change About text on the home page.', 'hairball' ),
 			) );
 			
 			// Add section.
 			$wp_customize->add_section( 'custom_about_text' , array(
-				'title'    => __('Change About Text','hairball'),
+				'title'    => __('Add About Text','hairball'),
 				'panel'    => 'text_blocks_about',
 				'priority' => 10
 			) );
@@ -323,7 +323,7 @@ if ( ! function_exists( 'hairball_setup' ) ) :
 				'priority'       => 500,
 				'theme_supports' => '',
 				'title'          => __( 'How it works section', 'hairball' ),
-				'description'    => __( 'Changing how it works section on the home page.', 'hairball' ),
+				'description'    => __( 'Here you can change how it works section on the home page.', 'hairball' ),
 			) );
 			
 			// Add section (the first one)
@@ -457,11 +457,12 @@ if ( ! function_exists( 'hairball_setup' ) ) :
 				return sanitize_text_field( $text );
 			}
 		}		
-		
-				//How it works
+			
 	}
 endif;
 add_action( 'after_setup_theme', 'hairball_setup' );
+
+
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
