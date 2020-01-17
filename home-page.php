@@ -22,7 +22,11 @@ get_header();
                     <?php echo get_theme_mod( 'about_block'); ?>
     </p>
     <?php endif;?>
-    <button class="hairball__button about__button">Read More</button>
+    <?php if( get_theme_mod( 'about_block_button') != "" ): ?>
+				
+                <a class="about-button-hairball" href="<?php echo get_theme_mod( 'about_block_button'); ?>"target="_blank"> <button class="hairball__button about__button">Read More</button></a>
+                 
+             <?php endif;?>
 </section><!--.quotation-text-area-->
 
 <section class="how-it-works">

@@ -305,6 +305,31 @@ if ( ! function_exists( 'hairball_setup' ) ) :
 					)
 				)
 			);
+
+						// Add section.
+						$wp_customize->add_section( 'custom_about_button' , array(
+							'title'    => __('Add link to button','hairball'),
+							'panel'    => 'text_blocks_about',
+							'priority' => 10
+						) );
+					
+						// Add setting
+						$wp_customize->add_setting( 'about_block_button', array(
+							 'default'           => __( 'default text', 'hairball' ),
+							 'sanitize_callback' => 'sanitize_about'
+						) );
+						// Add control
+						$wp_customize->add_control( new WP_Customize_Control(
+							$wp_customize,
+							'custom_about_button',
+								array(
+									'label'    => __( 'Button url', 'hairball' ),
+									'section'  => 'custom_about_button',
+									'settings' => 'about_block_button',
+									'type'     => 'text'
+								)
+							)
+						);
 			
 			 // Sanitize text
 			function sanitize_about( $text ) {

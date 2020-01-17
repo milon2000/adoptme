@@ -435,6 +435,10 @@ textarea {
 	line-height: 1.5;
 	font-weight: 100;
 }
+button,
+a {
+	cursor: pointer;
+}
 
 h1,
 h2,
@@ -625,7 +629,7 @@ input[type="submit"] {
 	-o-transition: background-size 0.2s;
 	transition: background-size 0.2s;
 	border: none;
-
+	
 }
 
 button:hover,
@@ -761,6 +765,10 @@ a {
 	-o-transition: background-size 0.2s;
 	transition: background-size 0.2s;
 	border: none;
+}
+
+.about-button-hairball {
+	background-color: transparent;
 }
 
 a:hover {
@@ -1192,7 +1200,7 @@ object {
 }*/
 .site-branding {
 	padding-left: 5%;
-	padding-top: 3%;
+	padding-top: 4%;
 	padding-bottom: 3%;
 }
 
@@ -1248,7 +1256,7 @@ object {
 
 .about__text-area {
 	width: 100%;
-	height: 25vh;
+	height: 30vh;
 	background-color: #efebec;
 	text-align: center;
 	padding: 0 15% 0 15%;
@@ -1289,7 +1297,7 @@ object {
 
 .featured-cat__cat-description {
 
-	padding: 2% 5% 4% 5%;
+	padding: 0 5% 0 5%;
 	text-align: center;
 
 }
@@ -1499,7 +1507,7 @@ object {
 ## Pages
 --------------------------------------------------------------*/
 .site-content .single-project {
-	width: 960px;
+	max-width: 960px;
 	margin: 0 auto;
 }
 
@@ -1611,7 +1619,7 @@ object {
 		}
 
 		.about__text-area {
-			height: 30vh;
+			height: 35vh;
 		}
 
 		.featured-cat__cat-description {
@@ -1627,11 +1635,6 @@ object {
 
 		}
 
-
-
-	}
-
-	@media screen and (max-width: 780px) {
 		.featured-cat__wrapper {
 			-webkit-box-orient: vertical;
 			-webkit-box-direction: normal;
@@ -1649,10 +1652,16 @@ object {
 		}
 
 		.featured-cat__cat-description {
+			padding-top: 5%;
 			padding-bottom: 7%;
 			width: 80%;
 
 		}
+
+	}
+
+	@media screen and (max-width: 780px) {
+
 
 		.cats__title {
 			font-size: 1.3em;
@@ -1685,6 +1694,9 @@ object {
 			width: 100%;
 			padding-right: 0;
 		}
+		.social-media--header {
+			bottom: 50px;
+		}
 	}
 
 	@media screen and (max-width: 600px) {
@@ -1702,6 +1714,7 @@ object {
 
 		.header-quotation {
 			margin-top: 0.4em;
+			padding-left: 0;
 		}
 
 		.site-quotation {
@@ -1738,6 +1751,10 @@ object {
 			right: -15rem;
 		}
 
+		.site-branding {
+			padding-bottom: 8%;
+		}
+
 	}
 
 	@media screen and (max-width: 400px) {
@@ -1748,6 +1765,7 @@ object {
 		.cats__single li {
 			width: 100%;
 		}
+
 	}
 
 	@media screen and (max-width: 350px) {
