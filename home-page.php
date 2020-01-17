@@ -1,4 +1,20 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Template Name: Home page layout
+ * The template for displaying home page
+ *
+ * This is the template that displays home page.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site may use a
+ * different template.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package hairball!
+ */
+
+get_header();
+?>
 
 <section class="about__text-area">
     <?php if( get_theme_mod( 'about_block') != "" ): ?>
